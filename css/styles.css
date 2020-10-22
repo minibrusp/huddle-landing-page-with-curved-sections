@@ -1,0 +1,56 @@
+/* variables */
+:root {
+   /* colors */
+   --Pink: hsl(322, 100%, 66%);
+   --Very-Dark-Cyan: hsl(192, 100%, 9%);
+   --Very-Pale-Blue: hsl(207, 100%, 98%);
+
+   /* font-family  */
+
+   --Headings: 'Poppins', sans-serif;
+   --Body: 'Open Sans', sans-serif;
+
+
+}
+
+/* Text-Highlight */ 
+
+::selection {
+   background: lightgray; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+   background: lightgray; /* Gecko Browsers */
+}
+
+/* input- place holder */
+
+::placeholder {
+   color: lightgrey;
+   opacity: 1; /* Firefox */
+}
+
+
+/* Globals -*/
+
+html {
+   box-sizing: border-box;
+}
+
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+
+body {
+   font-size: 1rem;
+   margin: 0;
+   font-family: var(--Body);
+   background: wheat;
+}
+
+h1, h2 , h3 , h4 {
+   font-family: var(--Headings);
+}
+
+.img-illu {
+   width: 100%;
+}
