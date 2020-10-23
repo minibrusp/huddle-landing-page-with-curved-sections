@@ -488,6 +488,7 @@ footer::before {
 .social-icons li a {
    color: var(--Very-Pale-Blue);
    outline: transparent;
+   transition: .5s all;
 
 }
 
