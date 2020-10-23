@@ -96,6 +96,8 @@ header nav {
 
 nav {
    padding: 15px 5vw;
+   animation: UptoDown 1.5s ease,
+               FadeIn 1.5s ease;
 }
 
 nav a {
@@ -160,6 +162,8 @@ nav a.btn:focus {
 
 .header-text {
    margin-top: 15vh;
+   animation: Rotateandsmalltobig 1.5s ease,
+               FadeIn 1.5s ease;
 }
 
 .header-text h1 {
@@ -179,6 +183,8 @@ nav a.btn:focus {
 
 header figure.header {
    margin-top: 90px;
+   animation: DowntoUp 1.5s ease,
+               FadeIn 1.5s ease;
 }
 
 /* MILESTONE */
@@ -430,6 +436,7 @@ footer::before {
 
 #newsletter-input-text {
    min-width: 100%;
+   transition: .5s border-color;
 }
 
 #newsletter-input-text:focus {
@@ -444,6 +451,7 @@ footer::before {
    font-family: var(--Body);
    float: right;
    cursor: pointer;
+   transition: .5s all;
 }
 
 #newsletter-input-button:active,
@@ -535,3 +543,105 @@ footer::before {
    transform-origin: right;
    background-color: var(--Pink);
 }
+
+/* ANIMATION KEYS  */
+
+@keyframes UptoDown {
+   0% {
+      transform: translateY(-100px);
+   }
+
+   50% {
+      transform: translateY(10px);
+   }
+
+   70% {
+      transform: translateY(-5px);
+   }
+
+   80% {
+      transform: translateY(5px);
+   }
+
+   90% {
+      transform: translateY(-2px);
+   }
+
+   95% {
+      transform: translateY(1px);
+   }
+   100% {
+      transform: translateY(-1px);
+   }
+}
+
+@keyframes DowntoUp {
+   0% {
+      transform: translateY(100px);
+   }
+   50% {
+      transform: translateY(10px);
+   }
+
+   70% {
+      transform: translateY(-5px);
+   }
+
+   80% {
+      transform: translateY(5px);
+   }
+
+   90% {
+      transform: translateY(-2px);
+   }
+
+   95% {
+      transform: translateY(1px);
+   }
+   100% {
+      transform: translateY(-1px);
+   }
+}
+
+@keyframes LeftToRight {
+   0% {
+      transform: translateX(-150px);
+   }
+
+   100% {
+      transform: translateX(0);
+   }
+}
+
+
+@keyframes FadeIn {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes Rotateandsmalltobig {
+   0% {
+      transform: rotate(360deg) scale(0);
+   }
+   60% {
+      transform: rotate(-20deg);
+   }
+   80% {
+      transform: rotate(10deg);
+   }
+   90% {
+      transform: rotate(-5deg);
+   }
+   95% {
+      transform: rotate(3deg);
+   }
+   100% {
+      transform: rotate(-1deg) scale(1);
+   }
+}
+
