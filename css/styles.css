@@ -85,6 +85,10 @@ h1, h2 , h3 , h4 {
    width: 100%;
 }
 
+img.img-illu:hover {
+   transform: scale(1.1);
+}
+
 a {
    text-decoration: none;
 }
@@ -100,13 +104,24 @@ a.btn {
    display: inline-block;
    font-size: 0.878rem;
    transition: .5s background-color,
-               .5s color;
+               .5s all;
    outline: transparent;
 }
 
 a.btn:hover, 
 a.btn:focus {
+   background-color: transparent;
+   border: 1px solid var(--Pink);
+   color: var(--Pink);
+   font-weight: 400;
+
+}
+
+a.btn:active {
    background-color: var(--Very-Dark-Cyan);
+   color: var(--Very-Pale-Blue);
+   border: none;
+   font-weight: 600;
 }
 
 .btn-boxshadow {
@@ -118,6 +133,7 @@ header nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   margin-top: 2vh;
 }
 
 nav {
@@ -229,6 +245,9 @@ section.milestone {
    max-width: 30px;
    margin-left: 5px;
 }
+.milestone-items figure img:hover {
+   transform: scale(1.1);
+}
 
 
 .milestone-items h2 {
@@ -306,11 +325,11 @@ section.feature {
 }
 
 /* COMMUNITY */
-aside.community {
+section.community {
    margin: 200px auto;
 }
 
-aside.community h2 {
+section.community h2 {
    max-width: 300px;
    margin: 40px auto 40px auto;
    font-size: 1.68rem;
@@ -476,10 +495,19 @@ footer::before {
    transition: .5s all;
 }
 
-#newsletter-input-button:active,
+#newsletter-input-button:hover, 
 #newsletter-input-button:focus {
+   background-color: transparent;
+   color: var(--Pink);
+   border: 1px solid var(--Pink);
+   font-weight: 400;
+}
+
+#newsletter-input-button:active {
    background-color: lightseagreen;
    color: var(--Very-Dark-Cyan);
+   border: none;
+   font-weight: 600;
 }
 
 
@@ -674,7 +702,7 @@ footer::before {
       max-width: 500px;
    }
 
-   aside.community {
+   section.community {
       margin: 250px auto 300px auto;
    }
 
@@ -725,11 +753,12 @@ footer::before {
    }
 
    nav figure img {
-      width: 160px;
+      width: 190px;
    }
 
    nav a.btn {
       font-size: 1rem;
+      padding: .35rem 1.5rem;
    }
 
    .header-text h1 {
@@ -823,16 +852,16 @@ footer::before {
 
    /* COMMUNITY-900  */
 
-   aside.community {
+   section.community {
       padding: 50px 0;
    }
 
-   aside.community h2 {
+   section.community h2 {
       max-width: unset;
       font-size: 2rem;
    }
 
-   aside.community a.btn {
+   section.community a.btn {
       padding: 1rem 4.8rem;
    }
 
