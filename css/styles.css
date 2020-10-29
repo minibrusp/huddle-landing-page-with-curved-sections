@@ -100,13 +100,18 @@ a.btn {
    display: inline-block;
    font-size: 0.878rem;
    transition: .5s background-color,
-               .5s color;
+               .5s color,
+               .5s font-weight;
    outline: transparent;
 }
 
 a.btn:hover, 
 a.btn:focus {
-   background-color: var(--Very-Dark-Cyan);
+   /* background-color: var(--Very-Dark-Cyan); */
+   border: 1px solid var(--Pink);
+   color: var(--Pink);
+   background-color: transparent;
+   font-weight: 400;
 }
 
 .btn-boxshadow {
@@ -118,6 +123,7 @@ header nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   margin-top: 5px;
 }
 
 nav {
@@ -476,11 +482,22 @@ footer::before {
    transition: .5s all;
 }
 
-#newsletter-input-button:active,
+#newsletter-input-button:hover, 
 #newsletter-input-button:focus {
+   background-color: transparent;
+   color: var(--Pink);
+   border: 1px solid var(--Pink);
+   font-weight: 400;
+}
+
+#newsletter-input-button:active {
    background-color: lightseagreen;
    color: var(--Very-Dark-Cyan);
+   border: transparent;
 }
+
+
+
 
 
 .social-icons {
@@ -724,12 +741,20 @@ footer::before {
       padding: 1rem 4.5rem;
    }
 
+   header nav {
+      margin-top: 3vh;
+   }
+
    nav figure img {
-      width: 160px;
+      width: 200px;
    }
 
    nav a.btn {
       font-size: 1rem;
+   }
+
+   .header-text {
+      margin-top: 20vh;
    }
 
    .header-text h1 {
@@ -907,6 +932,47 @@ footer::before {
 
 @media screen and (min-width: 1100px) {
 
+   a.btn {
+      font-size: 1.3rem;
+      padding: 1.5rem 6.9rem;
+   }
+
+   nav a.btn {
+      font-size: 1.3rem;
+      padding: 0.4rem 1.5rem;
+   }
+   
+   .header-text h1 {
+      font-size: 2.4rem;
+   }
+   .header-text p {
+      max-width: 690px;
+      font-size: 1.3rem;
+   }
+
+   header figure.header {
+      margin-top: 110px;
+   }
+
+   header img.img-illu {
+      max-width: 850px;
+   }
+
+   .milestone-items:nth-child(1) img{
+      margin-left: 35px;
+   }
+
+   .milestone-items figure img {
+      max-width: 50px;
+   }
+
+   .milestone-items h2 {
+      font-size: 5.3rem;
+   }
+
+   .milestone-items small {
+      font-size: 1.896rem;
+   }
 
 
    .feature-items-container {
@@ -914,8 +980,26 @@ footer::before {
       margin: 0 auto;
    }
 
+   .feature-items h2 {
+      font-size: 2.3rem;
+   }
+
    .feature-items p {
       max-width: 490px;
+      font-size: 1.2rem;
+   }
+
+   aside.community {
+      padding: 60px 0;
+   }
+
+   aside.community h2 {
+      font-size: 2.3rem;
+   }
+
+   aside.community a.btn {
+      padding: 1.3rem 5.1rem;
+      font-size: 1.2rem;
    }
 }
 
@@ -926,6 +1010,11 @@ footer::before {
    nav {
       padding: 15px 0;
       max-width: 1100px;
+      margin: 0 auto;
+   }
+
+   .feature-items-container {
+      max-width: 1200px;
       margin: 0 auto;
    }
 
